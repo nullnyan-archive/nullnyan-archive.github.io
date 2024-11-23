@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- META -->
+    <title>&Oslash;nyan</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.gif" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.gif" />
+    <link rel="stylesheet" href="/vendor/uikit/uikit.min.css" />
+    <script src="/vendor/uikit/uikit.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/pages/main.css" />
+    <script type="text/javascript" src="/assets/js/star.js" defer></script>
+    <script type="text/javascript" src="/assets/js/main.js" defer></script>
+  </head>
+  <body class="fullscreen">
+    <div id="background" class="fullscreen"></div>
+    <canvas id="starfield" class="fullscreen"></canvas>
+    <div
+      id="infotabs"
+      class="uk-padding-small uk-overflow-hidden uk-width-1-1 uk-width-3-4@m uk-width-2-3@l uk-width-1-2@xl"
+    >
+      <noscript>Эта страница требует JavaScript.</noscript>
+      <div id="infotabs_container" class="uk-flex uk-flex-column uk-margin-auto uk-padding-small" hidden>
+        <ul
+          id="infotabs_navigation"
+          class="uk-width-1-1"
+          uk-tab="connect: #infotabs_switcher; animation: uk-animation-fade"
+        >
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">История</a></li>
+          <li><a id="infotabs_pics_tab" href="#">Картинки</a></li>
+          <li><a href="#">Архивы</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <ul
+          id="infotabs_switcher"
+          class="uk-switcher uk-margin uk-width-1-1 uk-height-1-1 uk-padding-small uk-overflow-auto"
+        >
+          <li>
+            <img src="/assets/img/logo.png" alt="[Логотип]" />
+            <p>Привет лунатикам!</p>
+            <p>
+              Это эхо от дальнего заброшенного аванпоста цивилизации "нульчан", который сошёл с орбиты и отправился в
+              безвестие космоса.
+            </p>
+            <p>
+              Пока он летит сквозь звёздную пыль, вы можете почитать
+              <s class="uk-text-meta">анекдоты про Ватсона</s> некоторую информацию о том, что здесь было, есть и будет.
+            </p>
+            <p>
+              Ещё вы можете посмотреть немного старых картинок, а также скачать пару лупов, если вы владеете древней
+              технологией Ｍａｃｒｏｍｅｄｉａ　Ｆｌａｓｈ（マクロメディア・フラッシュ）.
+            </p>
+            <p><i>El Psy Congroo!</i></p>
+          </li>
+          <li>
+            <p>
+              …Когда-то давно, в незапамятные времена, когда трава была зеленей, небо − синее, а носы − погорбатей,
+              здесь была имиджборда «Нульнян».
+            </p>
+            <p>
+              На ней обсуждали, сможет ли робот когда-нибудь написать симфонию
+              <span class="uk-text-meta">(спойлер: может)</span>, пририсовывали разным персонажам горбатые носы, писали
+              андеграунд блек митол, искали шестиугольники в новостях, делали новости про всякое, экспериментировали с
+              веб-дизайном и бэкендом, путешествовали ИРЛ и виртуально, писали кулстори и всячески отдыхали.
+            </p>
+            <p>
+              Благодя содействию анонимуса нонеймам с борд в этой незаметной унылой пещере в утлом уголке нижних
+              интернетов однажды появилась какая-то своеобразная жизнь − местами странная, не слишком разнообразная, не
+              всем понятная, однако было время, когда и здесь происходил вин и комедия жизни.
+            </p>
+            <p>Время ушло, интерес к борде был утерян и ныне здесь пусто.</p>
+            <p>
+              Может быть, однажды тут что-нибудь появится. Никто ничего не обещает; гарантий никаких нет: посмотрите, мы
+              летим в космосе и не знаем, куда прилетим и что встретится по пути. Но зато осталось главное − память.
+            </p>
+          </li>
+          <li>
+            <noscript>Отображение картинок требует JavaScript.</noscript>
+            <div id="infotabs_pics"></div>
+          </li>
+          <li>
+            <p>
+              <a href="/archives/HNY2018.rar" target="_blank" download="HNY2018.rar"
+                >Игра, созданная посетителем на новый 2018 год.</a
+              >
+            </p>
+            <p>
+              <a href="/archives/game.rar" target="_blank" download="game.rar"
+                >Другая игра, созданная просто так. Кажется, автор тренировался на ней писать код.</a
+              >
+            </p>
+            <p>
+              <a href="/archives/loop.rar" target="_blank" download="loop.rar">Архив лупов с главной страницы.</a>
+            </p>
+            <p>
+              <a href="/archives/loop_gorgeous.rar" target="_blank" download="loop_gorgeous.rar"
+                >Специальное дополнение флеш-лупов.</a
+              >
+            </p>
+            <p>
+              <a href="/archives/t.rar" target="_blank" download="t.rar"
+                >Просто сохранившийся неоконченный пример мобильной вёрстки.</a
+              >
+            </p>
+            <p>
+              <a href="/archives/video/1471297490933.webm" target="_blank" download="1471297490933.webm">Cursed nya.</a>
+            </p>
+            <p>
+              <a href="/archives/flash/1477495844428.swf" target="_blank" download="1477495844428.swf"
+                >Шестиугольный шторм (флешка).</a
+              >
+            </p>
+            <p>
+              <a href="/archives/audio/Одиссея.mp3" target="_blank" download="Одиссея.mp3"
+                >Музыкальная композиция «Одиссея», некогда исполненная посетителем имиджборды.</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              По всяким вопросам пишите на адрес электронной почты
+              <a href="mailto:lol@nullnyan.net">lol@nullnyan.net</a>.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

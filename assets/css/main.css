@@ -1,0 +1,311 @@
+html {
+  background: #111217;
+  color: #a8a2ad;
+}
+
+body {
+  background: transparent;
+  font:
+    10pt/1 Consolas,
+    'Liberation Mono',
+    Courier,
+    monospace;
+}
+
+canvas {
+  overflow: hidden;
+}
+
+i {
+  text-shadow: none;
+}
+
+[red] {
+  color: red;
+  text-shadow: 0 0 1px red;
+}
+
+[green] {
+  color: green;
+  text-shadow: 0 0 1px green;
+}
+
+[gray] {
+  color: gray;
+  text-shadow: 0 0 1px darkgray;
+}
+
+[blue] {
+  color: lightblue;
+  text-shadow: 0 0 1px lightblue;
+}
+
+.center {
+  position: absolute;
+  display: table;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+  width: 500px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 9;
+}
+
+.center > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.smooth {
+  transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#logo {
+  display: inline-block;
+  background: url(/img/logo.png) 0 0 / 100% 100% no-repeat transparent;
+  width: 300px;
+  height: 107px;
+}
+
+#boardlist {
+  position: absolute;
+  z-index: 9;
+}
+
+#boardlist a,
+#boardlist a:visited {
+  position: absolute;
+  color: #a6f4f2; /*#89C6BB*/
+  text-decoration: none;
+  font-size: 14pt;
+  text-shadow: 0 0 4px rgba(137, 198, 187, 0.2);
+  opacity: 0;
+}
+
+#boardlist a:hover {
+  color: #e6e2d3;
+  text-shadow: 0 0 4px rgba(255, 208, 176, 0.2);
+}
+
+#boardlist a span {
+  position: absolute;
+  width: 100px;
+  line-height: 57px;
+  text-align: center;
+}
+
+#player {
+}
+
+#player audio {
+  display: none;
+}
+
+#visualize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#spectrum {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#spectrum canvas {
+  vertical-align: bottom;
+  width: 100%;
+  height: 100px;
+}
+
+#spectrum audio {
+  display: none;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all 3s ease-in-out;
+  -webkit-transition: all 3s ease-in-out;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: -1;
+}
+
+#background_loader {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  opacity: 0;
+}
+
+#starfield {
+  position: absolute;
+  background-color: transparent;
+}
+
+.hexagon {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(100, 199, 204, 0.1);
+  text-align: left;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: '';
+  position: absolute;
+  width: 0;
+}
+
+.hexagon:before {
+  bottom: 100%;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+}
+
+#hexagonFront {
+  width: 400px;
+  height: 230.94px;
+  margin: 115.47px 0;
+}
+
+#hexagonFront:before,
+#hexagonFront:after {
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+}
+
+#hexagonFront:before {
+  border-bottom: 115.47px solid rgba(100, 199, 204, 0.1);
+}
+
+#hexagonFront:after {
+  border-top: 115.47px solid rgba(100, 199, 204, 0.1);
+}
+
+.hexagon.small {
+  width: 100px;
+  height: 57.74px;
+  margin: 28.87px 0;
+}
+
+.hexagon.small:before,
+.hexagon.small:after {
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon.small:before {
+  border-bottom: 28.87px solid rgba(100, 199, 204, 0.1);
+}
+
+.hexagon.small:after {
+  border-top: 28.87px solid rgba(100, 199, 204, 0.1);
+}
+
+#log {
+  position: fixed;
+  top: 0;
+  left: -500px;
+  width: 500px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 12;
+}
+
+#logtxt {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  width: 500px;
+  max-width: 500px;
+  color: #e6e2d3;
+  background: transparent;
+  text-shadow: 0 0 3px #928e7d;
+  font-size: 9pt;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+#log,
+#logtxt {
+  transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: aquamarine;
+  border-radius: 4px;
+  box-shadow: 0 0 4px;
+  cursor: pointer;
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 5s ease-in-out;
+  -o-transition: opacity 5s ease-in-out;
+  -moz-transition: opacity 5s ease-in-out;
+  -webkit-transition: opacity 5s ease-in-out;
+  backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
